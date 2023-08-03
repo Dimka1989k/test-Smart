@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/mixin";
+import { device, transition } from "../../utils/mixin";
 
 export const SectionMain = styled.section`
   ${device.tablet} {
@@ -31,6 +31,11 @@ export const ButtonArrow = styled.button`
   background: #f9f9f9;
   margin-right: 22px;
   cursor: pointer;
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
+  }
   :last-child {
     margin-right: 0px;
   }
@@ -118,6 +123,12 @@ export const ButtonImage = styled.button`
   letter-spacing: 2.4px;
   text-transform: uppercase;
   cursor: pointer;
+
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
+  }
 
   ${device.desktop} {
     padding: 30px 60px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/mixin";
+import { device, transition } from "../../utils/mixin";
 
 export const SectionContacts = styled.section`
   padding: 30px;
@@ -150,6 +150,11 @@ export const ButtonBlack = styled.button`
   background: #333;
   border: none;
   padding: 10px 20px;
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
+  }
 
   cursor: pointer;
 

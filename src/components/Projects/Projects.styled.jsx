@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/mixin";
-// import Bar from "../../images/Projects/Bar.png";
+import { device, transition } from "../../utils/mixin";
 
 export const SectionProjects = styled.section`
   padding: 30px;
@@ -92,7 +91,6 @@ export const ButtonArrow = styled.button`
   position: absolute;
   left: 79px;
   top: 60px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,6 +106,11 @@ export const ButtonArrow = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 14px;
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
+  }
 
   ${device.mobile} {
     font-size: 14px;
@@ -168,6 +171,11 @@ export const ButtonBlack = styled.button`
   background: #333;
   border: none;
   padding: 10px 20px;
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
+  }
 
   cursor: pointer;
 

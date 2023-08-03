@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/mixin";
+import { device, transition } from "../../utils/mixin";
 
 export const ContainerFooter = styled.footer`
   background-color: #2c2c2c;
@@ -146,6 +146,7 @@ export const InfoItemContact = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
+
   a {
     color: #fff;
     font-size: 14px;
@@ -209,19 +210,44 @@ export const EmailIcon = styled.img`
 export const FaceBookIcon = styled.img`
   width: 10px;
   height: 19px;
+  cursor: pointer;
+  :hover,
+  :focus {
+    transform: scale(1.4);
+    transition: transform ${transition};
+  }
 `;
 export const LinkedInIcon = styled.img`
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  :hover,
+  :focus {
+    transform: scale(1.4);
+    transition: transform ${transition};
+  }
 `;
 export const TwiterIcon = styled.img`
   width: 22px;
   height: 17px;
+  cursor: pointer;
+  :hover,
+  :focus {
+    transform: scale(1.4);
+    transition: transform ${transition};
+  }
 `;
 
 export const PininterestIcon = styled.img`
   width: 14px;
   height: 19px;
+  cursor: pointer;
+
+  :hover,
+  :focus {
+    transform: scale(1.4);
+    transition: transform ${transition};
+  }
 `;
 
 export const ContainerLine = styled.div`

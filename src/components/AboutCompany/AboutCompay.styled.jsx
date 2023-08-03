@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { device } from "../../utils/mixin";
+import { device, transition } from "../../utils/mixin";
 
 export const SectionAbout = styled.section`
   padding: 30px;
@@ -98,6 +98,12 @@ export const ButtonRead = styled.button`
   ${device.desktop} {
     background: #fff;
     padding: 23px 65px;
+  }
+
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    transition: transform ${transition};
   }
 `;
 
