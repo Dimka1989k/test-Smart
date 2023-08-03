@@ -33,7 +33,7 @@ export const ButtonArrow = styled.button`
   cursor: pointer;
   :hover,
   :focus {
-    transform: scale(1.2);
+    transform: scale(1.3);
     transition: transform ${transition};
   }
   :last-child {
