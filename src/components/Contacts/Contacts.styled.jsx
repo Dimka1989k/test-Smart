@@ -152,7 +152,7 @@ export const ButtonBlack = styled.button`
   padding: 10px 20px;
   :hover,
   :focus {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform ${transition};
   }
 
