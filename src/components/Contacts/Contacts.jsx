@@ -20,16 +20,47 @@ import CallImage2x from "../../images/Contacts/CallImage@2x.png";
 
 export const Contacts = () => {
   const [errorSymbol, setErrorSymbol] = useState("*");
-
-  const handleInputChange = (event) => {
-    const { value } = event.target;
-    setErrorSymbol(value.trim() === "" ? "*" : "");
-  };
+  const [nameInput, setNameInput] = useState("");
+  const [interestInput, setInterestInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [messageInput, setMessageInput] = useState("");
 
   const handleClick = (event) => {
     event.preventDefault();
     setErrorSymbol("*");
-    // Add your form submission logic here if needed
+  };
+
+  const handleNameChange = (event) => {
+    setNameInput(event.target.value);
+  };
+
+  const handleInterestChange = (event) => {
+    setInterestInput(event.target.value);
+  };
+
+  const handlePhoneChange = (event) => {
+    setPhoneInput(event.target.value);
+    setErrorSymbol("*");
+  };
+
+  const handleEmailChange = (event) => {
+    setEmailInput(event.target.value);
+    setErrorSymbol("*");
+  };
+
+  const handleMessageChange = (event) => {
+    setMessageInput(event.target.value);
+    setErrorSymbol("*");
+  };
+
+  const handleClearInputs = () => {
+    setNameInput("");
+    setPhoneInput("");
+    setEmailInput("");
+    setMessageInput("");
+    setErrorSymbol("");
+    setInterestInput("");
   };
 
   return (
@@ -45,46 +76,62 @@ export const Contacts = () => {
             onClick={handleClick}
           >
             <Label>
-              <Input type="text" placeholder="Имя" />
+              <Input
+                type="text"
+                placeholder="Имя"
+                value={nameInput}
+                onChange={handleNameChange}
+              />
             </Label>
             <Label>
               <Input
                 type="number"
                 placeholder="Номер телефона"
-                onChange={handleInputChange}
+                value={phoneInput}
+                onChange={handlePhoneChange}
               />
-              <span
-                style={{
-                  color: "#C30000",
-                  fontSize: "14px",
-                  position: "absolute",
-                  left: "140px",
-                  top: "14px",
-                }}
-              >
-                {errorSymbol}
-              </span>
+              {phoneInput.length === 0 && (
+                <span
+                  style={{
+                    color: "#C30000",
+                    fontSize: "14px",
+                    position: "absolute",
+                    left: "140px",
+                    top: "14px",
+                  }}
+                >
+                  {errorSymbol}
+                </span>
+              )}
             </Label>
             <Label>
               <Input
                 type="text"
                 placeholder="E-mail"
-                onChange={handleInputChange}
+                value={emailInput}
+                onChange={handleEmailChange}
               />
-              <span
-                style={{
-                  color: "#C30000",
-                  fontSize: "14px",
-                  position: "absolute",
-                  left: "65px",
-                  top: "14px",
-                }}
-              >
-                {errorSymbol}
-              </span>
+              {emailInput.length === 0 && (
+                <span
+                  style={{
+                    color: "#C30000",
+                    fontSize: "14px",
+                    position: "absolute",
+                    left: "65px",
+                    top: "14px",
+                  }}
+                >
+                  {errorSymbol}
+                </span>
+              )}
             </Label>
             <Label>
-              <Input type="text" placeholder="Интересующий товар/услуга" />
+              <Input
+                type="text"
+                placeholder="Интересующий товар/услуга"
+                value={interestInput}
+                onChange={handleInterestChange}
+              />
             </Label>
             <Label>
               <Textarea
@@ -93,25 +140,28 @@ export const Contacts = () => {
                 cols="30"
                 rows="10"
                 placeholder="Сообщение"
-                onChange={handleInputChange}
+                value={messageInput}
+                onChange={handleMessageChange}
               ></Textarea>
-              <span
-                style={{
-                  color: "#C30000",
-                  fontSize: "14px",
-                  position: "absolute",
-                  left: "94px",
-                  top: "14px",
-                }}
-              >
-                {errorSymbol}
-              </span>
+              {messageInput.length === 0 && (
+                <span
+                  style={{
+                    color: "#C30000",
+                    fontSize: "14px",
+                    position: "absolute",
+                    left: "94px",
+                    top: "14px",
+                  }}
+                >
+                  {errorSymbol}
+                </span>
+              )}
             </Label>
             <Paragraph>
               Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
             </Paragraph>
             <ContainerButton>
-              <ButtonBlack>
+              <ButtonBlack onClick={handleClearInputs}>
                 ОТПРАВИТЬ <Arrow src={ArrowLight} alt="ArrowLight" />
               </ButtonBlack>
             </ContainerButton>
