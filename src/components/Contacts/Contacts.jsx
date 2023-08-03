@@ -20,9 +20,16 @@ import CallImage2x from "../../images/Contacts/CallImage@2x.png";
 
 export const Contacts = () => {
   const [errorSymbol, setErrorSymbol] = useState("*");
+
+  const handleInputChange = (event) => {
+    const { value } = event.target;
+    setErrorSymbol(value.trim() === "" ? "*" : "");
+  };
+
   const handleClick = (event) => {
     event.preventDefault();
     setErrorSymbol("*");
+    // Add your form submission logic here if needed
   };
 
   return (
@@ -41,7 +48,11 @@ export const Contacts = () => {
               <Input type="text" placeholder="Имя" />
             </Label>
             <Label>
-              <Input type="number" placeholder="Номер телефона" />
+              <Input
+                type="number"
+                placeholder="Номер телефона"
+                onChange={handleInputChange}
+              />
               <span
                 style={{
                   color: "#C30000",
@@ -55,7 +66,11 @@ export const Contacts = () => {
               </span>
             </Label>
             <Label>
-              <Input type="text" placeholder="E-mail" />
+              <Input
+                type="text"
+                placeholder="E-mail"
+                onChange={handleInputChange}
+              />
               <span
                 style={{
                   color: "#C30000",
@@ -78,6 +93,7 @@ export const Contacts = () => {
                 cols="30"
                 rows="10"
                 placeholder="Сообщение"
+                onChange={handleInputChange}
               ></Textarea>
               <span
                 style={{
