@@ -274,7 +274,7 @@ Error generating stack: `+o.message+`
   cursor: pointer;
   :hover,
   :focus {
-    transform: scale(1.2);
+    transform: scale(1.3);
     transition: transform ${gt};
   }
   :last-child {
