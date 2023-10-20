@@ -38,33 +38,33 @@ export const Footer = () => {
         <ContainerContactsInfo>
           <Logoicon src={Logo} alt="logo" />
           <ContainerInfo>
-            <Paragraph>Информация</Paragraph>
+            <Paragraph>Information</Paragraph>
             <ul>
               <InfoItem>
-                <a>Главная</a>
+                <a>Home</a>
               </InfoItem>
               <InfoItem>
-                <a>Галерея</a>
+                <a>Gallery</a>
               </InfoItem>
               <InfoItem>
-                <a>Проекты</a>
+                <a>Projects</a>
               </InfoItem>
               <InfoItem>
-                <a>Сертифиаты </a>
+                <a>Certificates</a>
               </InfoItem>
               <InfoItem>
-                <a>Контакт</a>
+                <a>Contact</a>
               </InfoItem>
             </ul>
           </ContainerInfo>
           <ContainerContacts>
-            <Paragraph>Контакты</Paragraph>
+            <Paragraph>Contacts</Paragraph>
             <ul>
               <InfoItemContact>
                 <GeolocationIcon src={GeoLocation} alt="GeoLocation" />
                 <a href="https://goo.gl/maps/DaUrFrGB6oiANadv9">
-                  100000, Республика Казахстан, <br></br>г. Караганда, ул.
-                  Телевизионная 10
+                  100000, Republic of Kazakhstan, <br></br>Karaganda, st.
+                  Television 10
                 </a>
               </InfoItemContact>
               <InfoItemContact>
@@ -79,7 +79,7 @@ export const Footer = () => {
           </ContainerContacts>
         </ContainerContactsInfo>
         <ContainerSocial>
-          <Paragraph>Социальные сети</Paragraph>
+          <Paragraph>Social media</Paragraph>
           <ul style={{ display: "flex" }}>
             <InfoItemSocial>
               <a>
@@ -106,7 +106,7 @@ export const Footer = () => {
       </Container>
       <ContainerLine />
       <DigitalParagraph>
-        © 2019 Digital Project. Все права защищены.
+        © 2019 Digital Project. All rights reserved.
       </DigitalParagraph>
     </ContainerFooter>
   );

@@ -66,7 +66,7 @@ export const Main = () => {
               />
               <img src={BackgroundImage} alt="video" />
               <ButtonImage>
-                Взглянуть
+                Take a look
                 <ArrowButton src={ArrowLRight} />
               </ButtonImage>
             </Picture>

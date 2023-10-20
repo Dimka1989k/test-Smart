@@ -86,7 +86,7 @@ export const AboutCompay = () => {
           </picture>
         </BackgroundImage>
         <ContainerAbout>
-          <h2>О компании</h2>
+          <h2>About company</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry`s standard dummy text
@@ -97,7 +97,7 @@ export const AboutCompay = () => {
           </p>
           <ContainerButton>
             <ButtonRead>
-              Читать
+              Read
               <Arrow src={ArrowRight} alt="ArrowRight" />
             </ButtonRead>
           </ContainerButton>

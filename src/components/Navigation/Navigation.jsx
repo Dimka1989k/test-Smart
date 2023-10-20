@@ -11,20 +11,20 @@ import { CgClose } from "react-icons/cg";
 
 const data = [
   {
-    label: "ГЛАВНАЯ",
+    label: "HOME",
   },
   {
-    label: "ГАЛЕРЕЯ",
+    label: "GALLERY",
   },
 
   {
-    label: "ПРОЕКТЫ",
+    label: "PROJECTS",
   },
   {
-    label: "СЕРТИФИКАТЫ",
+    label: "CERTIFICATES",
   },
   {
-    label: "КОНТАКТЫ",
+    label: "CONTACTS",
   },
 ];
 

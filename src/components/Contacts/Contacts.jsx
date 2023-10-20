@@ -65,7 +65,7 @@ export const Contacts = () => {
 
   return (
     <SectionContacts>
-      <HaaderContacts>Связаться с нами</HaaderContacts>
+      <HaaderContacts>Connect with us</HaaderContacts>
       <Container>
         <ContainerForm>
           <form
@@ -78,7 +78,7 @@ export const Contacts = () => {
             <Label>
               <Input
                 type="text"
-                placeholder="Имя"
+                placeholder="Name"
                 value={nameInput}
                 onChange={handleNameChange}
               />
@@ -86,7 +86,7 @@ export const Contacts = () => {
             <Label>
               <Input
                 type="number"
-                placeholder="Номер телефона"
+                placeholder="Phone number"
                 value={phoneInput}
                 onChange={handlePhoneChange}
               />
@@ -128,7 +128,7 @@ export const Contacts = () => {
             <Label>
               <Input
                 type="text"
-                placeholder="Интересующий товар/услуга"
+                placeholder="Product/service of interest"
                 value={interestInput}
                 onChange={handleInterestChange}
               />
@@ -139,7 +139,7 @@ export const Contacts = () => {
                 id=""
                 cols="30"
                 rows="10"
-                placeholder="Сообщение"
+                placeholder="Message"
                 value={messageInput}
                 onChange={handleMessageChange}
               ></Textarea>
@@ -158,11 +158,11 @@ export const Contacts = () => {
               )}
             </Label>
             <Paragraph>
-              Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+              By submitting an application you agree to the privacy policy
             </Paragraph>
             <ContainerButton>
               <ButtonBlack onClick={handleClearInputs}>
-                ОТПРАВИТЬ <Arrow src={ArrowLight} alt="ArrowLight" />
+                SEND <Arrow src={ArrowLight} alt="ArrowLight" />
               </ButtonBlack>
             </ContainerButton>
           </form>

@@ -29,7 +29,7 @@ import StadiumGreate2x from "../../images/Projects/StadiumGreate@2x.png";
 export const Projects = () => {
   return (
     <SectionProjects>
-      <HaaderProjects>Наши проекты</HaaderProjects>
+      <HaaderProjects>Our projects</HaaderProjects>
       <Container>
         <BackgroundContainer>
           <Picture>
@@ -51,9 +51,9 @@ export const Projects = () => {
             />
             <img src={HouseSun} alt="HouseSun" />
           </Picture>
-          <HeaderImage>ДОСУГОВЫЙ ЦЕНТР</HeaderImage>
+          <HeaderImage>LEISURE CENTER</HeaderImage>
           <ButtonArrow>
-            ПОДРОБНЕЕ
+            MORE DETAILS
             <Arrow src={ArrowLight} alt="ArrowLight" />
           </ButtonArrow>
         </BackgroundContainer>
@@ -146,7 +146,7 @@ export const Projects = () => {
       </ContainerImages>
       <ContainerButton>
         <ButtonBlack>
-          ВСЕ ПРОЕКТЫ <Arrow src={ArrowLight} alt="ArrowLight" />
+          ALL PROJECTS <Arrow src={ArrowLight} alt="ArrowLight" />
         </ButtonBlack>
       </ContainerButton>
     </SectionProjects>

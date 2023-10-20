@@ -17,21 +17,21 @@ export const Task = () => {
   return (
     <>
       <SectionTask>
-        <HaaderTask>Основные задачи</HaaderTask>
+        <HaaderTask>Main goals</HaaderTask>
         <Conatiner>
           <ContainerNumber>
             <Number src={NumberOne} />
             <Paragraph>
-              Создание комфортных условий и повышение качества обслуживания
-              клиентов
+              Creating comfortable conditions and improving the quality of
+              service clients
             </Paragraph>
           </ContainerNumber>
           <ContainerNumber>
             <NumberSecond src={NumberTwo} />
             <ParagraphSecond>
-              Постоянно совершенствовать качество предоставляемых услуг путем
-              обучения персонала, закупки нового оборудования и усиленной
-              рекламы на рынке
+              Constantly improve the quality of services provided by personnel
+              training, purchase of new equipment and strengthened advertising
+              on the market
             </ParagraphSecond>
           </ContainerNumber>
         </Conatiner>
